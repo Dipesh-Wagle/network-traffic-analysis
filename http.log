@@ -1,0 +1,22 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2025-06-10-07-24-46
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+1749554685.980358	CA0lzw40nPF6CTAH3a	2607:fea8:8de:4900:3895:571d:2119:cddc	53422	2607:5300:203:3fe6::	80	1	GET	http.kali.org	/kali/dists/kali-rolling/InRelease	-	1.1	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	302	Found	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.291811	CA4Tou43veZZr7Oj8b	2607:fea8:8de:4900:3895:571d:2119:cddc	36710	2a07:de40:b250:131:10:151:131:30	80	1	GET	download.opensuse.org	/repositories/security:/zeek/Debian_Testing/InRelease	-	1.1	Debian APT-HTTP/1.3 (3.0.1)	-	0	1913	200	OK	-	-	(empty)	-	-	-	-	-	-	FnlcsT1DuJm6r0srB2	InRelease	text/plain
+1749554686.491644	CA4Tou43veZZr7Oj8b	2607:fea8:8de:4900:3895:571d:2119:cddc	36710	2a07:de40:b250:131:10:151:131:30	80	2	GET	download.opensuse.org	/repositories/security:/zeek/Debian_Testing/Packages.gz	-	1.1	Debian APT-HTTP/1.3 (3.0.1)	-	0	25159	200	OK	-	-	(empty)	-	-	-	-	-	-	FUuG8DZjaLdVELU35	Packages.gz	application/x-gzip
+1749554686.845816	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	6	GET	kali.download	/kali/dists/kali-rolling/non-free/binary-amd64/Packages.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.845816	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	7	GET	kali.download	/kali/dists/kali-rolling/non-free/Contents-amd64.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.368595	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	1	GET	kali.download	/kali/dists/kali-rolling/InRelease	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.845816	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	5	GET	kali.download	/kali/dists/kali-rolling/contrib/Contents-amd64.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.845816	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	3	GET	kali.download	/kali/dists/kali-rolling/main/Contents-amd64.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.845816	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	4	GET	kali.download	/kali/dists/kali-rolling/contrib/binary-amd64/Packages.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.505112	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	2	GET	kali.download	/kali/dists/kali-rolling/main/binary-amd64/Packages.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.845816	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	9	GET	kali.download	/kali/dists/kali-rolling/non-free-firmware/Contents-amd64.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554686.845816	CJaHv39SfgSqNJuwj	2607:fea8:8de:4900:3895:571d:2119:cddc	55766	2606:4700::6811:feef	80	8	GET	kali.download	/kali/dists/kali-rolling/non-free-firmware/binary-amd64/Packages.gz	-	-	Debian APT-HTTP/1.3 (3.0.1)	-	0	0	-	-	-	-	(empty)	-	-	-	-	-	-	-	-	-
+1749554904.228436	CRB6aR22Vhubyschvf	10.0.0.221	45908	172.66.0.227	80	1	GET	x.com	/	-	1.1	curl/8.13.0	-	0	167	301	Moved Permanently	-	-	(empty)	-	-	-	-	-	-	F2NvaU3hUJUVJ6b4B8	-	text/html
+1749554929.645683	C9ZiIxzEU92CdJ20e	2607:fea8:8de:4900:3895:571d:2119:cddc	46562	2600:1901:0:b2bd::	80	1	GET	ifconfig.me	/	-	1.1	curl/8.13.0	-	0	38	200	OK	-	-	(empty)	-	-	-	-	-	-	FxFtDc4bGXZupSunXl	-	text/plain
