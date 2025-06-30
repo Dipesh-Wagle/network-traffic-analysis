@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Traffic Analysis Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #161b22;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    h1 {
+      color: #58a6ff;
+    }
+    h2 {
+      color: #8b949e;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 0.25rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    code, pre {
+      background-color: #0e1117;
+      border-left: 4px solid #58a6ff;
+      padding: 0.5rem;
+      display: block;
+      margin-top: 0.5rem;
+      overflow-x: auto;
+      color: #c9d1d9;
+    }
+    a {
+      color: #58a6ff;
+    }
+    img.chart {
+      width: 100%;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Network Traffic Analysis Report</h1>
+
+    <div class="section">
+      <h2>🔍 Executive Summary</h2>
+      <p>This project involved capturing and analyzing network traffic using Wireshark and Zeek. The goal was to detect suspicious activity such as DNS anomalies, HTTP redirects, TCP SYN scans, and unknown service probes.</p>
+    </div>
+
+    <div class="section">
+      <h2>📁 Tools Used</h2>
+      <ul>
+        <li>Wireshark (Packet Capture)</li>
+        <li>Zeek (Network Security Monitoring)</li>
+        <li>Nmap, dig, ping, curl (Simulated Traffic)</li>
+        <li>Kali Linux (Environment)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>⚠️ Key Findings</h2>
+      <ul>
+        <li>Suspicious TCP connections on port 4444</li>
+        <li>Repeated DNS lookups to malformed domains</li>
+        <li>HTTP requests that returned 301 redirects and 200 OK responses</li>
+        <li>Zeek and Wireshark together provided correlated log and packet evidence</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📄 Zeek Log Samples</h2>
+      <h3>Connection Summary (conn.log)</h3>
+      <pre><code>10.0.0.196 → 224.0.0.251:5353 | udp | dns | 0.000001
+10.0.0.221 → 64.71.255.204:53 | udp | dns | 0.017388</code></pre>
+
+      <h3>DNS Queries (dns.log)</h3>
+      <pre><code>10.0.0.221 | _http._tcp.http.kali.org | SRV | NOERROR
+10.0.0.221 | http.kali.org           | A   | NOERROR</code></pre>
+
+      <h3>HTTP Requests (http.log)</h3>
+      <pre><code>2607:fea8:... | http.kali.org | /kali/dists/kali-rolling/InRelease
+2607:fea8:... | download.opensuse.org | /repositories/security:/zeek/... </code></pre>
+
+      <h3>Security Notices (notice.log)</h3>
+      <pre><code>PacketFilter::Dropped_Packets | 1490 dropped, 1632 received, 2343 on link</code></pre>
+
+      <h3>Weird Events (weird.log)</h3>
+      <pre><code>2607:fea8:... | truncated_tcp_payload</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>📊 Top Insights</h2>
+      <p>Visual breakdowns of network activity from parsed Zeek logs:</p>
+      <h3>Top 10 Queried Domains</h3>
+      <img src="charts/top_domains.png" alt="Top Queried Domains" class="chart" />
+
+      <h3>Top 10 Destination Ports</h3>
+      <img src="charts/top_ports.png" alt="Top Destination Ports" class="chart" />
+
+      <h3>Top 10 HTTP User Agents</h3>
+      <img src="charts/top_user_agents.png" alt="Top HTTP User Agents" class="chart" />
+    </div>
+
+    <div class="section">
+      <h2>📸 Screenshots</h2>
+      <p>Check the <a href="../screenshots">screenshots folder</a> for visuals of terminal commands, packet analysis, and Wireshark captures.</p>
+    </div>
+
+    <div class="section">
+      <h2>📁 Full Logs</h2>
+      <p>Explore all related log files including <code>conn.log</code>, <code>dns.log</code>, <code>http.log</code>, and <code>notice.log</code> <a href="../zeek-logs">here</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2>🚀 Conclusion</h2>
+      <p>This project demonstrated real-world techniques for capturing and analyzing network activity using open-source tools. The Zeek-Wireshark combo proved highly effective for identifying anomalies and early indicators of compromise in a lab network.</p>
+    </div>
+
+    <p style="text-align:center; font-size:0.9rem; color:#8b949e;">Built with ❤️ by Dipesh Wagle | Powered by GitHub Pages</p>
+  </div>
+</body>
+</html>
