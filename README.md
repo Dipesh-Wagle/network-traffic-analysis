@@ -1,6 +1,6 @@
 # Zeek Logs
 
-These logs were collected on June 10, 2025 as part of a simulated network traffic analysis using Zeek.
+These logs were collected as part of a simulated network traffic analysis using Zeek.
 
 Only the most relevant logs are included here:
 - `conn.log`: All connection summaries
